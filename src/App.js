@@ -56,21 +56,17 @@ const App = () => {
     }
     if (compare.length < 2) {
       setCompare(pre => [...pre, { doubleId, index }])
-      console.log(1)
     } else {
       setCompare([])
     }
   }
 
   useEffect(() => {
-    console.log(2)
     if (compare.length === 2) {
       if (compare[0].doubleId === compare[1].doubleId) {
-        console.log(2)
         setCompare([])
       }
       else {
-        console.log(3)
         setTimeout(() => {
           try {
             imgRef.current[compare[0]?.index].src = background
